@@ -10,7 +10,7 @@
 - Check interval [default 10 sec]
 - Multithreading as timer;
 
-####Usage
+###Usage
 
 ```
 usage: main.py [-h] [-c COOLDOWN] [-n NUMBER_ATTEMPTS] -p PROCESS
@@ -34,7 +34,8 @@ required named arguments:
                         Name of the process to supervise```
 
 
-####Examples
+###Examples
+
 - `bash -c "sleep 1 && exit 0"`
 
 ```sh
@@ -50,6 +51,7 @@ required named arguments:
 2020-10-04 20:41:10,487 [INFO][start-sproc-2] COOLDOWN. Process started and ended
 2020-10-04 20:41:10,488 [INFO][start-sproc-2] No more tries left. Exiting...
 ```
+
 - `bash -c "sleep 5 && exit 0"`
 
 ```sh
