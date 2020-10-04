@@ -78,7 +78,8 @@ required named arguments:
 2020-10-04 20:42:06,482 [INFO][mon-process-2] Running. See ya in 10 sec
 2020-10-04 20:42:16,484 [INFO][mon-process-3] Start process check
 2020-10-04 20:42:16,485 [INFO][mon-process-3] Process has exited with 0 code
-2020-10-04 20:42:16,485 [INFO][mon-process-3] No more tries left. Exiting...```
+2020-10-04 20:42:16,485 [INFO][mon-process-3] No more tries left. Exiting...
+```
 
 - `bash -c "sleep 1 && exit 1"`
 
@@ -155,4 +156,5 @@ required named arguments:
 2020-10-04 20:50:49,054 [INFO][MainThread] Running. See ya in 10 sec
 2020-10-04 20:50:59,056 [INFO][mon-process-1] Start process check
 2020-10-04 20:50:59,057 [INFO][mon-process-1] Process has exited with 1 code
-2020-10-04 20:50:59,058 [INFO][mon-process-1] No more tries left. Exiting...```
+2020-10-04 20:50:59,058 [INFO][mon-process-1] No more tries left. Exiting...
+```
