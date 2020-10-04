@@ -1,4 +1,4 @@
-#Supervisor demo implementation
+# Supervisor demo implementation
 ### Features
 
 - Automatic process start after failure or expected exit;
@@ -31,7 +31,8 @@ optional arguments:
 
 required named arguments:
   -p PROCESS, --process PROCESS
-                        Name of the process to supervise```
+                        Name of the process to supervise
+```
 
 
 ### Examples
