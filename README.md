@@ -13,7 +13,7 @@
 ### Usage
 
 ```
-usage: main.py [-h] [-c COOLDOWN] [-n NUMBER_ATTEMPTS] -p PROCESS
+usage: supervisor.py [-h] [-c COOLDOWN] [-n NUMBER_ATTEMPTS] -p PROCESS
                [-i INETRVAL_CHECK] [-l LOGS_TOGGLE]
 
 Supervisor demo python implementation
@@ -40,7 +40,7 @@ required named arguments:
 - `bash -c "sleep 1 && exit 0"`
 
 ```sh
-./main.py -p 'bash -c "sleep 1 && exit 0"' -d
+./supervisor.py -p 'bash -c "sleep 1 && exit 0"' -d
 2020-10-04 20:40:55,963 [INFO][MainThread] Starting to supervise ```bash -c "sleep 1 && exit 0"``` process
 2020-10-04 20:40:55,969 [INFO][MainThread] Trying to start bash -c "sleep 1 && exit 0"
 2020-10-04 20:40:57,470 [INFO][MainThread] COOLDOWN. Process started and ended
@@ -56,7 +56,7 @@ required named arguments:
 - `bash -c "sleep 5 && exit 0"`
 
 ```sh
-./main.py -p 'bash -c "sleep 5 && exit 0"' -d
+./supervisor.py -p 'bash -c "sleep 5 && exit 0"' -d
 2020-10-04 20:41:30,152 [INFO][MainThread] Starting to supervise ```bash -c "sleep 5 && exit 0"``` process
 2020-10-04 20:41:30,158 [INFO][MainThread] Trying to start bash -c "sleep 5 && exit 0"
 2020-10-04 20:41:31,660 [INFO][MainThread] Process has been started
@@ -84,7 +84,7 @@ required named arguments:
 - `bash -c "sleep 1 && exit 1"`
 
 ```sh
-./main.py -p 'bash -c "sleep 1 && exit 1"' -d
+./supervisor.py -p 'bash -c "sleep 1 && exit 1"' -d
 2020-10-04 20:43:24,230 [INFO][MainThread] Starting to supervise ```bash -c "sleep 1 && exit 1"``` process
 2020-10-04 20:43:24,235 [INFO][MainThread] Trying to start bash -c "sleep 1 && exit 1"
 2020-10-04 20:43:25,736 [INFO][MainThread] COOLDOWN. Process started and ended
@@ -100,7 +100,7 @@ required named arguments:
 - `sh -c "sleep 10 && exit 1"`
 
 ```sh
-./main.py -p 'sh -c "sleep 10 && exit 1"' -d
+./supervisor.py -p 'sh -c "sleep 10 && exit 1"' -d
 2020-10-04 20:44:34,065 [INFO][MainThread] Starting to supervise ```sh -c "sleep 10 && exit 1"``` process
 2020-10-04 20:44:34,070 [INFO][MainThread] Trying to start sh -c "sleep 10 && exit 1"
 2020-10-04 20:44:35,571 [INFO][MainThread] Process has been started
@@ -128,7 +128,7 @@ required named arguments:
 - `bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"`
 
 ```sh
-./main.py -p 'bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"' -d
+./supervisor.py -p 'bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"' -d
 2020-10-04 20:49:17,440 [INFO][MainThread] Starting to supervise ```bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"``` process
 2020-10-04 20:49:17,446 [INFO][MainThread] Trying to start bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"
 2020-10-04 20:49:18,947 [INFO][MainThread] Process has been started
@@ -148,7 +148,7 @@ required named arguments:
 - `bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"` one run
 
 ```sh
-./main.py -p 'bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"' -d -n 1
+./supervisor.py -p 'bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"' -d -n 1
 2020-10-04 20:50:47,545 [INFO][MainThread] Starting to supervise ```bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"``` process
 2020-10-04 20:50:47,552 [INFO][MainThread] Trying to start bash -c "if [ -f lock ]; then exit 1; fi; sleep 10 && touch lock && exit 1"
 2020-10-04 20:50:49,053 [INFO][MainThread] Process has been started
